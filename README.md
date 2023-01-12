@@ -141,7 +141,7 @@ Para resolver las indicaciones del ejercicio, entonces solo bastaría con realiz
 ```python
 year = int(input("ingrese el año que desea evaluar: ")) 
 ```
-Tendía que convertir el valor en un entero para poder realizar la operación de `%`  correctamente, que lo que hace es revisar el sobrante de la división. Por lo cual usamos el metodo de conversión `int()`
+Tendría que convertir el valor en un entero para poder realizar la operación de `%`  correctamente, que lo que hace es revisar el 'sobrante' de la división. Por lo cual usamos el metodo de conversión `int()`
 
 Y finalizando el código, agregué una metodo `try` `and` `except`, en caso de que el usuario ingresara un valor erroneo, no se 'rompiece' la ejecución del programa.
 
