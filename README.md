@@ -55,3 +55,66 @@ Al cumplirse el criterio establecido, ordenaremos los elementos, antemoniendo el
 ```python
 			listaNumeros[numero1] , listaNumeros[numero2] = listaNumeros[numero2] , listaNumeros[numero1]
 ```
+
+
+------------
+
+####  Solución ejercicio 5:
+El ejercicio 5 consta del siguiente enunciado :
+
+*"Generar dos arreglos **A** y **B** con 10 valores aleatorios de letras del abecedario y mostrar los siguientes resultados: *
+
+*1. Unión: A⋃B*
+*2. Intersección A⋂B*
+*3. Diferencia: AΔB*
+*4. Diferencia Simétrica: A – B*
+
+##### Solución:
+Primero, realicé la importación de la biblioteca` random`.
+
+Segundo establecí los elementos del conjunto `A` y `B`
+
+```python
+letras = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+```
+Una vez establecido esto, procedí a crear una lista aleatoria con los elementos de cada conjunto:
+
+```python
+A = [random.choice(letras) for i in range(10)]
+B = [random.choice(letras) for i in range(10)]
+```
+el metodo `choice` permite elegir elementos existentes de una lista, de manera aleatoria, es como si realizara un `for` para recorrer la lista y extrae los elementos de esta.
+
+Para realizar las operaciones indicadas, utilicé el metodo `set` el cual permite realizar una representación de los conjuntos en **`Python`**
+
+##### Union:
+Utilizamos el operador  `|` que nos devuelve los elementos existentes en `A` y en `B`.
+```python
+C = set(A) | set(B)
+print("Unión: ", C)
+```
+##### Intersección:
+Utilizamos el operador  `&` que nos devuelve los elementos que existan tanto en `A` como en `B`.
+```python
+C = set(A) & set(B)
+print("Intersección: ", C)
+```
+##### Diferencia:
+Utilizamos el perador bit a bit `^` 
+```python
+C = set(A) ^ set(B)
+print("Diferencia: ", C)
+```
+##### Diferencia simetrica:
+Utilizamos el operador aritmetico `-` 
+```python
+diferencia_simetrica = set(A) - set(B)
+print("Diferencia Simétrica: ", diferencia_simetrica)
+```
+
+
+
+
+
+
+
