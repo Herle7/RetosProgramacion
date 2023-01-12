@@ -157,7 +157,7 @@ try:
         print('El año',year, "no es bisiesto.")    
 
 except:
-    print('No ingreso un valor valido')
+    print('Lo siento, no ingresaste un valor valido, programa finalizado...')
     exit()
 ```
 
