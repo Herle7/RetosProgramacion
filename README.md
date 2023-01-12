@@ -108,8 +108,8 @@ print("Diferencia: ", C)
 ##### Diferencia simetrica:
 Utilizamos el operador aritmetico `-` 
 ```python
-diferencia_simetrica = set(A) - set(B)
-print("Diferencia Simétrica: ", diferencia_simetrica)
+C = set(A) - set(B)
+print("Diferencia Simétrica: ", C)
 ```
 
 
