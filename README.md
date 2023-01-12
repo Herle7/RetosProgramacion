@@ -112,6 +112,60 @@ C = set(A) - set(B)
 print("Diferencia Simétrica: ", C)
 ```
 
+------------
+
+####  Solución ejercicio 2:
+
+El enunciado para este ejercicio es el siguiente:
+
+*Crear un input (o prompt de entrada) donde se ingrese un año y determina si es bisiesto en el calendario gregoriano.*
+
+Para poder re solver este ejercicio, primero tuve que entender las caracteristicas de un año bisiestro, a lo cual encontre que:
+
+> Un año es bisiesto si es divisible entre 4, excepto si es divisible entre 100. Sin embargo, si es divisible entre 400, entonces sí es bisiesto.
+
+Siguiendo esta premisa, tendría que realizar una evaluación del año:
+1.  ¿Es divisible entre 4?
+2. No puede ser divisible entre 100.
+3. Es divisble entre 400 pero no entre 100.
+
+para ello planteé la siguiente linea de `if`:
+
+```python
+if year % 4 = 0 and ( year % 100 != 0  or year % 400 = 0):
+```
+Si cumple con las condiciones anidadas de esta linea de comando, el año  es bisiestro.
+
+Para resolver las indicaciones del ejercicio, entonces solo bastaría con realizar el comando `input` y mostrar los mensajes en pantalla con el metodo `print`, pero  hay que tener en cuenta algo.
+
+```python
+year = int(input("ingrese el año que desea evaluar: ")) 
+```
+Tendía que convertir el valor en un entero para poder realizar la operación de `%`  correctamente, que lo que hace es revisar el sobrante de la división. Por lo cual usamos el metodo de conversión `int()`
+
+Y finalizando el código, agregué una metodo `try` `and` `except`, en caso de que el usuario ingresara un valor erroneo, no se 'rompiece' la ejecución del programa.
+
+Por lo cual el código final es el siguiente:
+
+```python
+year=input("Ingrese el año que desea evaluar, ejemplo 1998: ")
+try:
+    year = int(year)
+    if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0):
+        print('El año',year, "es bisiesto.")
+    else:
+        print('El año',year, "no es bisiesto.")    
+
+except:
+    print('No ingreso un valor valido')
+    exit()
+```
+
+
+
+
+
+
 
 
 
